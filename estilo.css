@@ -1,0 +1,290 @@
+body {
+    min-height: 1000px;
+    margin-bottom: 100vh; /* Ajusta el valor según la altura de tu footer */
+    margin: 0;
+}
+
+pestaña{
+    width:100%;
+    overflow: hidden;
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(253, 146, 107, 0.916);
+}
+
+.footer-section {
+    background-color: rgb(52, 38, 34);
+    color: white;
+    display: flex;
+    box-sizing: border-box;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    justify-content: space-between;
+    height: 11%; /* Ajusta el valor según la altura de tu footer */
+    z-index: 2;
+}
+
+.main-content {
+  flex: 1;
+  max-height:4%;
+}
+
+.titulo-barra{
+    color:#fff;
+    font-size: 1rem;
+    margin-left: 20px;
+    box-sizing: border-box;
+}
+
+.navegacion a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    justify-content: space-between;
+    display: inline;
+    margin-right: 20px;
+    box-sizing: border-box;
+}
+.columnas {
+    display: flex; /* Utilizamos flexbox para crear dos columnas */
+    background-color: #febca7;
+
+}
+
+/* Estilos para la columna izquierda */
+.columna.izquierda {
+    position: relative; /* Establecer la posición relativa para poder posicionar elementos hijos */
+    width: 40%;
+    background-color: #febca7;
+    display: flex;
+    flex-direction: column;
+}
+
+.columna.izquierda h1 {
+    font-size: 4vw;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    z-index: 2;
+    font-family: cursive; /* Establece una fuente de letra bonita */
+    color: white; /* Color del texto */
+
+}
+
+.columna.izquierda video {
+    flex-grow: 1;
+    width: 92%;
+    height: auto;
+    z-index: 1; /* Colocar el video detrás del título */
+    margin:4%;
+}
+
+
+/* Estilos para la columna derecha */
+.columna.derecha {
+    width: 60%;
+    background-color: #FFCCBC;
+    display: flex;
+    flex-wrap: wrap; /* Permite que las cajas se envuelvan en filas si no caben en una línea */
+    justify-content: center; /* Alineación horizontal centrada */
+    align-items: center; /* Alineación vertical centrada */
+}
+
+
+video {
+    width: 0%; /* El video ocupa el 100% del ancho de su contenedor (columna izquierda) */
+    height: auto; /* El video ocupa el 100% de la altura de la ventana gráfica */
+}
+
+.cajas {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* Permite que las cajas se envuelvan en filas si no caben en una línea */
+  justify-content: center; /* Alineación horizontal centrada */
+  align-items: center; /* Alineación vertical centrada (opcional) */
+}
+
+.caja {
+    text-align: center;
+    margin: 5px; /* Espacio entre las cajas */
+    box-sizing: border-box;
+    width: 45%;
+    margin-left: 5px;
+
+}
+
+.caja img {
+    width: 100%; /* Ajusta el ancho máximo de la imagen al tamaño de la caja */
+    height:100%;
+    object-fit: cover;
+}
+
+.caja h2 {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el título */
+    color: white; /* Color de texto del título */
+    padding: 10px; /* Espacio alrededor del título */
+    margin: 0; /* Elimina el margen por defecto del título */
+    width: 100%;
+    box-sizing: border-box;
+    height:auto;
+    font-size: 2vw;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.caja a {
+    display: block; /* Hace que el enlace ocupe todo el ancho de la caja */
+}
+
+a {
+  color: white;
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
+}
+
+.nosotros-blog{
+    width: 100%;
+}
+
+.separador{
+    width: 100%;
+    height: 2vh;
+    background-color: rgba(253, 146, 107, 0.916);
+}
+
+.columna-nb-izq{
+    width: 60%;
+    background-color: #FFCCBC;
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-left: 10%;
+    margin-right: 10%; /* Define el margen derecho */
+}
+
+/* Estilos para la columna derecha */
+.columna-nb-dcha {
+    width: 40%;
+    background-color: #febca7;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+.columna-nb-dcha h3 {
+    background-color: #febca7;
+    color: white;
+    text-align: center;
+    padding: 4%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(35%)); /* Ajusta los valores según sea necesario */
+    gap: 2%; /* Espacio entre las imágenes */
+    padding: 1%; /* Espacio alrededor de la galería */
+    box-sizing: border-box;
+    align-items: center; 
+}
+
+.grid-container .box {
+    width: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+.box:nth-child(1){
+    grid-column-start: span 2;
+}
+.box:nth-child(4){
+    grid-column-start: span 2;
+}
+
+/* Añadido para asegurar que las imágenes no se salgan de la pantalla */
+.grid-container img {
+    max-width: 100%;
+    max-height: 88%;
+    box-sizing: border-box;
+}
+
+.columna-carta-izq{
+    width: 40%;
+    background-color: #FFCCBC;
+    overflow: hidden;
+}
+
+.columnas .columna-nb-izq{
+    background-color:  #FFCCBC;
+
+}
+
+
+.columna-carta-dcha{
+    width: 60%;
+    background-color: #febca7;
+}
+
+.columna-carta-izq img{
+    width: 100%;
+}
+
+.slider{
+    width: 800%;
+    display:flex;
+    overflow: hidden;
+    animation: cambio 24s infinite;
+}
+
+.slider li{
+    list-style: none;
+}
+
+@keyframes cambio {
+    0% {
+        margin-left: 0;
+    }
+    8.33% {
+        margin-left: 0;
+    }
+    16.67% {
+        margin-left: -100%;
+    }
+    25% {
+        margin-left: -100%;
+    }
+    33.33% {
+        margin-left: -200%;
+    }
+    41.67% {
+        margin-left: -200%;
+    }
+    50% {
+        margin-left: -300%;
+    }
+    58.33% {
+        margin-left: -300%;
+    }
+    66.67% {
+        margin-left: -400%;
+    }
+    75% {
+        margin-left: -400%;
+    }
+    83.33% {
+        margin-left: -500%;
+    }
+    91.67% {
+        margin-left: -500%;
+    }
+    100% {
+        margin-left: -600%;
+    }
+}
