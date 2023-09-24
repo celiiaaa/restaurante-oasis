@@ -487,11 +487,13 @@ footer {
         flex: 1; /* Ambas columnas ocupan todo el ancho */
         margin-right: 0; /* Eliminar espacio entre las columnas */
         width: 100%;
+        order:1;
     }
 
     .columna-nosotros-izq {
         width: 80%; /* Ocupa todo el ancho de la columna izquierda */
         margin-left: 7%;
+        order:2;
         
     }
     .columna-nosotros-izq p{
