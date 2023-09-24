@@ -1,13 +1,25 @@
+/* ===============================
+   ESTILOS GENERALES
+   =============================== */
+
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     min-height: 1000px;
     margin-bottom: 100vh; /* Ajusta el valor según la altura de tu footer */
     margin: 0;
 }
 
-pestaña{
+.pestaña{
     width:100%;
     overflow: hidden;
 }
+
+/* ===============================
+   BARRA NAVEGADORA
+   =============================== */
 
 .barra {
     display: flex;
@@ -16,25 +28,7 @@ pestaña{
     background-color: rgba(253, 146, 107, 0.916);
 }
 
-.footer-section {
-    background-color: rgb(52, 38, 34);
-    color: white;
-    display: flex;
-    box-sizing: border-box;
-    bottom: 0;
-    position: fixed;
-    width: 100%;
-    justify-content: space-between;
-    height: 11%; /* Ajusta el valor según la altura de tu footer */
-    z-index: 2;
-}
-
-.main-content {
-  flex: 1;
-  max-height:4%;
-}
-
-.titulo-barra{
+.titulo-barra {
     color:#fff;
     font-size: 1rem;
     margin-left: 20px;
@@ -50,15 +44,28 @@ pestaña{
     margin-right: 20px;
     box-sizing: border-box;
 }
+
+/* ===============================
+   CONTENIDO PRINCIPAL
+   =============================== */
+
+.main-content {
+    flex: 1;
+    max-height:4%;
+}
+
 .columnas {
     display: flex; /* Utilizamos flexbox para crear dos columnas */
     background-color: #febca7;
-
 }
 
-/* Estilos para la columna izquierda */
+/* ===============================
+   PÁGINA INICIAL
+   =============================== */
+
+/* Columna izquierda - video y nombre del restaurante */
 .columna.izquierda {
-    position: relative; /* Establecer la posición relativa para poder posicionar elementos hijos */
+    position: relative;
     width: 40%;
     background-color: #febca7;
     display: flex;
@@ -73,9 +80,8 @@ pestaña{
     top: 50%;
     left: 20%;
     z-index: 2;
-    font-family: cursive; /* Establece una fuente de letra bonita */
-    color: white; /* Color del texto */
-
+    font-family: cursive; 
+    color: white; 
 }
 
 .columna.izquierda video {
@@ -86,8 +92,7 @@ pestaña{
     margin:4%;
 }
 
-
-/* Estilos para la columna derecha */
+/* Columna derecha - menú */
 .columna.derecha {
     width: 60%;
     background-color: #FFCCBC;
@@ -97,18 +102,12 @@ pestaña{
     align-items: center; /* Alineación vertical centrada */
 }
 
-
-video {
-    width: 0%; /* El video ocupa el 100% del ancho de su contenedor (columna izquierda) */
-    height: auto; /* El video ocupa el 100% de la altura de la ventana gráfica */
-}
-
 .cajas {
     width: 100%;
     display: flex;
     flex-wrap: wrap; /* Permite que las cajas se envuelvan en filas si no caben en una línea */
-  justify-content: center; /* Alineación horizontal centrada */
-  align-items: center; /* Alineación vertical centrada (opcional) */
+    justify-content: center; /* Alineación horizontal centrada */
+    align-items: center; /* Alineación vertical centrada (opcional) */
 }
 
 .caja {
@@ -117,7 +116,6 @@ video {
     box-sizing: border-box;
     width: 45%;
     margin-left: 5px;
-
 }
 
 .caja img {
@@ -139,36 +137,51 @@ video {
 }
 
 .caja a {
-    display: block; /* Hace que el enlace ocupe todo el ancho de la caja */
+    display: block;     /* Hace que el enlace ocupe todo el ancho de la caja */
 }
 
 a {
-  color: white;
-  width: 100%;
-  box-sizing: border-box;
-  height: auto;
-}
-
-.nosotros-blog{
+    color: white;
     width: 100%;
+    box-sizing: border-box;
+    height: auto;
 }
 
 .separador{
     width: 100%;
-    height: 2vh;
+    height: 2vw;
     background-color: rgba(253, 146, 107, 0.916);
 }
 
-.columna-nb-izq{
-    width: 60%;
-    background-color: #FFCCBC;
-    text-align: center; /* Centra el texto horizontalmente */
-    margin-left: 10%;
-    margin-right: 10%; /* Define el margen derecho */
+.separador-final{
+    width: 100%;
+    height: 8vw;
+    background-color: rgba(253, 146, 107, 0.916);
 }
 
-/* Estilos para la columna derecha */
-.columna-nb-dcha {
+/* ===============================
+   PÁGINA 2 - NOSOTROS
+   =============================== */
+
+/* Columna izquierda */
+.columna-nosotros-izq h1{
+    font-size: 3vw;
+    margin:10%;
+
+}
+.columna-nosotros-izq{
+    width: 60%;
+    background-color: #FFCCBC;
+    text-align: justify; /* Centra el texto horizontalmente */
+    margin-left: 10%;
+    margin-right: 10%; /* Define el margen derecho */
+    font-size: 1.2vw;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+/* Columna derecha */
+.columna-nosotros-dcha {
     width: 40%;
     background-color: #febca7;
     display: flex;
@@ -179,13 +192,15 @@ a {
     margin-bottom: 2%;
 }
 
-.columna-nb-dcha h3 {
+.columna-nosotros-dcha h3 {
     background-color: #febca7;
     color: white;
     text-align: center;
     padding: 4%;
+    font-size: 3vw;
 }
 
+/* Galería de imágenes */
 .grid-container {
     display: grid;
     grid-template-rows: repeat(auto-fit, minmax(35%)); /* Ajusta los valores según sea necesario */
@@ -193,6 +208,7 @@ a {
     padding: 1%; /* Espacio alrededor de la galería */
     box-sizing: border-box;
     align-items: center; 
+    margin-right: 8%;
 }
 
 .grid-container .box {
@@ -208,32 +224,60 @@ a {
     grid-column-start: span 2;
 }
 
-/* Añadido para asegurar que las imágenes no se salgan de la pantalla */
 .grid-container img {
     max-width: 100%;
     max-height: 88%;
     box-sizing: border-box;
 }
 
+/* ===============================
+   PÁGINA 3 - CARTA
+   =============================== */
+
+/* Columna izquierda */
 .columna-carta-izq{
     width: 40%;
     background-color: #FFCCBC;
     overflow: hidden;
+    text-align: center;
 }
 
-.columnas .columna-nb-izq{
-    background-color:  #FFCCBC;
-
-}
-
-
-.columna-carta-dcha{
+/* Columna derecha */
+.columna-carta-dcha {
     width: 60%;
     background-color: #febca7;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .columna-carta-izq img{
     width: 100%;
+}
+
+.columna-carta-dcha h6{
+    font-size: 3vw;
+    border-bottom: 0.5vw solid  rgba(253, 146, 107, 0.916);
+    margin-top: 2%;
+    margin-bottom: 0%;
+}
+
+.columna-carta-dcha h5{
+    text-align: center;
+    font-size:2.5vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 3%;
+    margin-left: 3%;
+    color: #fff;
+}
+
+.contenedor-tres-columnas {
+    flex-basis: calc(33.33% - 1%); /* Dividir en tres columnas y aplicar espacio entre ellas */
+    margin-right: 10px; /* Espacio entre las columnas (ajusta según desees) */
+    box-sizing: border-box; /* Asegura que el margen no afecte el ancho total */
+    font-size:2vh;
+    text-align: justify;
 }
 
 .slider{
@@ -287,4 +331,136 @@ a {
     100% {
         margin-left: -600%;
     }
+}
+
+/* ===============================
+   PÁGINA 4 - BLOG
+   =============================== */
+
+/* Columna izquierda */
+.columna-blog-izq{
+    width: 60%;
+    background-color: #FFCCBC;
+    text-align: center; /* Centra el texto horizontalmente */
+    margin-left: 2%;
+    margin-right: 2%; /* Define el margen derecho */
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+}
+
+/* Columna derecha */
+.columna-blog-dcha {
+    width: 40%;
+    background-color: #febca7;
+    align-items: center;
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+.columna-blog-dcha h3 {
+    background-color:  rgba(0, 0, 0, 0.4);
+    text-align: center;
+    padding: 4%;
+    font-size: 3vw;
+    color: #fff;
+    border-radius: 10px; /* Borde circular */
+}
+
+.comentario {
+    position: relative;
+    background-color: rgba(253, 146, 107, 0.916); /* Color de fondo del rectángulo */
+    padding: 20px;
+    margin-bottom: 20px;
+    margin:2%;
+    margin-left: 6%;
+    margin-right: 6%;
+    border-radius: 10px; /* Borde circular */
+    font-size:1.2vw;
+}
+
+.comentario h4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 5px;
+    background-color: rgba(253, 146, 107, 0.916); /* Color de fondo para las letras */
+    padding: 5px;
+    border-radius: 10px; /* Borde circular */
+}
+
+.columna-blog-izq h6{
+    font-size: 3vw;
+    margin: 6%; 
+    border-bottom: 0.5vw solid  rgba(253, 146, 107, 0.916);
+}
+
+.grid-container-blog {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
+    gap: 1%;
+    padding: 1%;
+    box-sizing: border-box;
+    width: 100%;
+    object-fit: cover;
+    max-width: 55%;
+}
+
+.box-blog {
+    object-fit: cover;
+    box-sizing: border-box;
+    width:100%;
+}
+
+.box-blog:nth-child(4) {
+    grid-row: span 2; /* Para que ocupe dos columnas en el grid */
+    width: 100%; /* Para que ocupe todo el ancho de las dos columnas */
+}
+
+.box-blog:nth-child(5) {
+    grid-row: span 2; /* Para que ocupe dos filas en el grid */
+    width: 100%; /* Para que ocupe todo el ancho de la columna */
+}
+
+.grid-container-blog img{
+    width: 100%;
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
+
+footer {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 8vw;;
+    z-index: 2;
+}
+  
+.footer-section {
+    display: flex;
+    height: 100%;
+}
+
+.contenedor-redes {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin-left: 2vw;
+    margin-right: 10vw;
+}
+
+.contenedor-info {
+    width: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10vw;
+    margin-right: 2vw;
 }
