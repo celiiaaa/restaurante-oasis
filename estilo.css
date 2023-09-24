@@ -240,6 +240,8 @@ a {
     background-color: #FFCCBC;
     overflow: hidden;
     text-align: center;
+
+    
 }
 
 /* Columna derecha */
@@ -255,6 +257,7 @@ a {
 .columna-carta-izq img{
     width: 100%;
 }
+
 
 .columna-carta-dcha h6{
     font-size: 3vw;
@@ -466,6 +469,14 @@ footer {
 }
 
 @media (max-width: 700px) {
+
+    .columna.izquierda h1 {
+        font-size: 15vw;
+        top: 45%;
+        font-size: 4vw;
+        left: 35%;
+    }
+
     .columnas {
         flex-direction: column; /* Cambiar a dirección de columna en pantallas pequeñas */
         align-items: flex-start; /* Alineación en la parte superior */
@@ -477,31 +488,42 @@ footer {
         margin-right: 0; /* Eliminar espacio entre las columnas */
         width: 100%;
     }
-    .columna-nosotros-izq {
-        flex: 1; /* Ambas columnas ocupan todo el ancho */
-        margin-right: 2%; /* Eliminar espacio entre las columnas */
-        width: 74%;
-        font-size: 2vh;
 
+    .columna-nosotros-izq {
+        width: 80%; /* Ocupa todo el ancho de la columna izquierda */
+        margin-left: 7%;
+        
+    }
+    .columna-nosotros-izq p{
+        font-size: 2.7vw;
     }
 
-    .columna-nosotros-dcha {
-        flex: 1; /* Ambas columnas ocupan todo el ancho */
-        margin-left: 12.7%; /* Eliminar espacio entre las columnas */
-        width: 74%;
-        font-size: 2vh;
 
+    .columna-nosotros-izq h4{
+        font-size: 3vw;
+    }
+
+    .columna-nosotros-izq h1{
+        align-items: center;
+        margin-left:27%;
+        
+    }
+ 
+
+    .columna-nosotros-dcha {
+        width: 100%; 
     }
 
    .grid-container {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Cambiamos a columnas automáticas con un ancho mínimo menor */
-        margin-right: 0; /* Eliminamos el margen derecho */
+        grid-template-columns: repeat(auto-fit, minmax(25%, 1fr)); /* Cambiamos a columnas automáticas con un ancho mínimo menor */
+        margin-right: 4%; /* Eliminamos el margen derecho */
+        margin-left: 4%;
     }
 
     .columna-carta-izq {
-        width: 92%; /* Ocupa todo el ancho de la columna izquierda */
-        margin-left: 4%;
-        margin-right: 4%;
+        width: 80%; /* Ocupa todo el ancho de la columna izquierda */
+        margin-left: 10%;
+        margin-right: 1%;
     }
 
     .columna-carta-dcha {
@@ -516,7 +538,7 @@ footer {
 
     /* Ajustar el tamaño de fuente para pantallas pequeñas */
     .columna-carta-dcha ol {
-        font-size: 2.5vw;
+        font-size: 2.8vw;
         margin-left: 2%; /* Reducir el espacio a la izquierda de la lista */
         border: 1vw solid #ffff;
         padding: 7%;
@@ -548,7 +570,16 @@ footer {
         margin-left: 6%;
         margin-right: 6%;
         border-radius: 10px; /* Borde circular */
-        font-size:1.8vw;
+        font-size:3vw;
+        z-index: 1;
+
+    
+    }
+
+    .comentario p{
+        z-index: 2;
+        font-size: 3vw;
+
     }
     
     .comentario h4 {
@@ -556,16 +587,18 @@ footer {
         top: 0;
         left: 0;
         margin: 5px;
-        background-color: rgba(253, 146, 107, 0.916); /* Color de fondo para las letras */
+        background-color: rgba(253, 146, 107, 0); /* Color de fondo para las letras */
         padding: 5px;
         border-radius: 10px; /* Borde circular */
-        font-size: 1.5vw;
+        font-size: 2.5vw;
+        z-index: 1;
     }
     
     .columna-blog-izq h6{
         font-size: 3.8vw;
         margin: 3%; 
         border-bottom: 0.5vw solid  rgba(253, 146, 107, 0.916);
+
     }  
     .icono-footer img {
         width: 78%; /* Ajusta el ancho deseado */
@@ -574,11 +607,37 @@ footer {
 
     .contenedor-info{
         font-size: 80%;
+    
     }
+
+    .columna-carta-izq{
+        margin-top: 20%;
+        }
 }
 
 
+@media (max-width: 890px) {
+
+    .grid-container {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
 
 
+    .columna-nosotros-izq{
+       font-size: 1.6vw;
+    }
+}
 
+@media (max-width: 1100px) {
+    .grid-container-blog {
+    
+        max-width: 82%;
+    }
 
+    .columna-carta-izq{
+    margin-top: 10%;
+    }
+
+}
