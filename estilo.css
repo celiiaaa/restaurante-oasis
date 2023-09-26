@@ -28,6 +28,16 @@ h1 {
     z-index: 2;     /* colocar el nombre del restaurante encima del video */
     font-family: cursive; 
     color: white; 
+    animation: changeColor 10s linear infinite; /* Duración de 5 segundos, repitiéndose infinitamente */
+}
+
+@keyframes changeColor {
+    0% {
+        color: #ffff;
+    }
+    70% {
+        color:  rgba(253, 146, 107, 0.916);
+    }
 }
 
 /* Títulos del menú */
@@ -219,6 +229,10 @@ a {
     margin-right: 10%;
 }
 
+.columna-nosotros-izq h3{
+    border-bottom: 0.5vw solid  rgba(253, 146, 107, 0.916);
+}
+
 /* Columna derecha */
 .columna-nosotros-dcha {
     width: 40%;
@@ -272,6 +286,8 @@ a {
     width: 40%;
     background-color: #FFCCBC;
     overflow: hidden;   /* No se vea nada que sobresalga de ese espacio*/
+    margin-left: 2%;
+
 }
 
 /* Columna derecha */
@@ -286,6 +302,7 @@ a {
 
 .columna-carta-izq img{
     width: 100%;
+    border-radius: 50px;
 }
 
 
@@ -709,7 +726,9 @@ footer {
     }
 
     .columna-carta-izq{
-    margin-top: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     }
+
 
 }
