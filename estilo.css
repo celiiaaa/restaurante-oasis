@@ -2,7 +2,7 @@
    ESTILOS GENERALES
    =============================== */
 
-   html{
+html{
     scroll-behavior: smooth;
 }
 
@@ -15,6 +15,83 @@ body {
 .pestaña{
     width:100%;
     overflow: hidden;
+}
+
+/* Título del restaurante */
+h1 {
+    font-size: 4vw;
+    text-align: center;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    z-index: 2;     /* colocar el nombre del restaurante encima del video */
+    font-family: cursive; 
+    color: white; 
+}
+
+/* Títulos del menú */
+h2 {
+    background-color: rgba(0, 0, 0, 0.7);   /* fondo semitransparente */
+    color: white;   /* color de las letras */
+    padding: 10px;  /* espacio alrededor del título */
+    margin: 0;  /* eliminar el margen por defecto del título */
+    width: 100%;
+    box-sizing: border-box;
+    height: auto;
+    font-size: 2vw; 
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+}
+
+/* Títulos principales correspondientes a los textos */
+.titulo1{
+    font-size: 3vw;
+    font-family: Tahoma;
+    text-align: center;
+}
+
+/* Títulos página Nosotros y Blog */
+.titulo2{
+    font-size: 2.5vw;
+    font-family: 'Optima';
+    text-align: center;
+}
+
+/* Título página Nuestra carta */
+.titulo3{
+    font-size: 2vw;
+    font-family: 'Optima';
+    text-align: center;
+}
+
+/* Títulos párrafos Nosotros */
+
+.tituloN{
+    font-size: 1.8vw;
+    font-family: 'Avenir';
+}
+
+/* Títulos párrafos Carta */
+
+.tituloM{
+    font-size:1.8vw;
+    font-family: 'Avenir';
+    text-align: center;
+}
+
+/* Títulos párrafos Blog */
+
+.tituloC{
+    font-size:1.8vw;
+    font-family: 'Avenir';
+}
+
+/* Texto de toda la página web */
+.texto{
+    text-align: justify; /* Centra el texto horizontalmente */
+    font-family: 'Avenir Next';
+    font-size: 1.4vw;
 }
 
 /* ===============================
@@ -55,7 +132,7 @@ body {
 }
 
 .columnas {
-    display: flex; /* Utilizamos flexbox para crear dos columnas */
+    display: flex;  /* crear dos columnas */
     background-color: #febca7;
 }
 
@@ -72,23 +149,12 @@ body {
     flex-direction: column;
 }
 
-.columna.izquierda h1 {
-    font-size: 4vw;
-    text-align: center;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 20%;
-    z-index: 2;
-    font-family: cursive; 
-    color: white; 
-}
-
+    /* estilo del video */
 .columna.izquierda video {
     flex-grow: 1;
     width: 92%;
     height: auto;
-    z-index: 1; /* Colocar el video detrás del título */
+    z-index: 1;     /* colocar el video detrás como fondo del nombre */
     margin:4%;
 }
 
@@ -96,44 +162,33 @@ body {
 .columna.derecha {
     width: 60%;
     background-color: #FFCCBC;
-    display: flex;
-    flex-wrap: wrap; /* Permite que las cajas se envuelvan en filas si no caben en una línea */
-    justify-content: center; /* Alineación horizontal centrada */
-    align-items: center; /* Alineación vertical centrada */
+    display: flex;  /* contenedor flexible */
+    flex-wrap: wrap; /* para ajustarlas a varias lineas */
+    align-items: center;    /* alineación vertical centrada */
 }
 
 .cajas {
     width: 100%;
     display: flex;
-    flex-wrap: wrap; /* Permite que las cajas se envuelvan en filas si no caben en una línea */
-    justify-content: center; /* Alineación horizontal centrada */
-    align-items: center; /* Alineación vertical centrada (opcional) */
+    flex-wrap: wrap; /* para ajustarlas a varias lineas */
+    justify-content: center; /* alineación horizontal centrada */
+    align-items: center;
 }
-
+    /* estilo de cada caja perteneciente al menú */
 .caja {
     text-align: center;
-    margin: 5px; /* Espacio entre las cajas */
+    margin: 5px;    /* para definir el espacio entre las cajas */
     box-sizing: border-box;
     width: 45%;
     margin-left: 5px;
 }
 
+    /* estilo de las imágenes de las cajas */
 .caja img {
     width: 100%; /* Ajusta el ancho máximo de la imagen al tamaño de la caja */
     height:100%;
     object-fit: cover;
-}
-
-.caja h2 {
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente para el título */
-    color: white; /* Color de texto del título */
-    padding: 10px; /* Espacio alrededor del título */
-    margin: 0; /* Elimina el margen por defecto del título */
-    width: 100%;
-    box-sizing: border-box;
-    height:auto;
-    font-size: 2vw;
-    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
 }
 
 .caja a {
@@ -164,20 +219,14 @@ a {
    =============================== */
 
 /* Columna izquierda */
-.columna-nosotros-izq h1{
-    font-size: 3vw;
-    margin:10%;
-
-}
 .columna-nosotros-izq{
     width: 60%;
     background-color: #FFCCBC;
-    text-align: justify; /* Centra el texto horizontalmente */
-    margin-left: 10%;
-    margin-right: 10%; /* Define el margen derecho */
-    font-size: 1.2vw;
     padding-left: 3%;
     padding-right: 3%;
+    padding-bottom: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 /* Columna derecha */
@@ -190,14 +239,13 @@ a {
     justify-content: center;
     align-items: center;
     margin-bottom: 2%;
+    margin-right: 1%;
 }
 
 .columna-nosotros-dcha h3 {
     background-color: #febca7;
     color: white;
-    text-align: center;
     padding: 4%;
-    font-size: 3vw;
 }
 
 /* Galería de imágenes */
@@ -239,9 +287,6 @@ a {
     width: 40%;
     background-color: #FFCCBC;
     overflow: hidden;
-    text-align: center;
-
-    
 }
 
 /* Columna derecha */
@@ -259,16 +304,13 @@ a {
 }
 
 
-.columna-carta-dcha h6{
-    font-size: 3vw;
+.columna-carta-dcha h3{
     border-bottom: 0.5vw solid  rgba(253, 146, 107, 0.916);
-    margin-top: 2%;
+    margin-top: 3%;
     margin-bottom: 0%;
 }
 
-.columna-carta-dcha h5{
-    text-align: center;
-    font-size:2.5vh;
+.columna-carta-dcha h4{
     background-color: rgba(0, 0, 0, 0.7);
     padding: 3%;
     margin-left: 3%;
@@ -279,7 +321,7 @@ a {
     flex-basis: calc(33.33% - 1%); /* Dividir en tres columnas y aplicar espacio entre ellas */
     margin-right: 10px; /* Espacio entre las columnas (ajusta según desees) */
     box-sizing: border-box; /* Asegura que el margen no afecte el ancho total */
-    font-size:2vh;
+    font-size:1.5vw;
     text-align: justify;
 }
 
@@ -366,9 +408,7 @@ a {
 
 .columna-blog-dcha h3 {
     background-color:  rgba(0, 0, 0, 0.4);
-    text-align: center;
     padding: 2.5%;
-    font-size: 2vw;
     color: #fff;
     border-radius: 10px; /* Borde circular */
 }
@@ -382,7 +422,6 @@ a {
     margin-left: 6%;
     margin-right: 6%;
     border-radius: 10px; /* Borde circular */
-    font-size:1.2vw;
 }
 
 .comentario h4 {
@@ -395,8 +434,12 @@ a {
     border-radius: 10px; /* Borde circular */
 }
 
-.columna-blog-izq h6{
-    font-size: 3vw;
+.comentario-nuevo{
+    width: 30vw;
+    font-size: 1.2vw;
+}
+
+.columna-blog-izq h3{
     margin: 6%; 
     border-bottom: 0.5vw solid  rgba(253, 146, 107, 0.916);
 }
@@ -468,8 +511,13 @@ footer {
     margin-right: 2vw;
 }
 
+/* ===============================
+   RESPONSIVE
+   =============================== */
+
 @media (max-width: 700px) {
 
+    /* Barra navegadora */
     .navegacion{
         position: relative;
         text-align: left;
@@ -484,11 +532,10 @@ footer {
         font-size: 3vw;
     }
 
-    .columna.izquierda h1 {
-        font-size: 15vw;
-        top: 45%;
-        font-size: 4vw;
-        left: 35%;
+    h1 {
+        font-size: 10vw;
+        font-family: cursive;
+        justify-content: center;
     }
 
     .columnas {
@@ -504,34 +551,42 @@ footer {
         order:1;
     }
 
+    h2 {
+        font-size: 4vw;
+    }
+
+    .titulo1{
+        font-size: 5vw;
+    }
+
+    .titulo2{
+        font-size: 6vw;
+    }
+
+    .titulo3{
+        font-size: 4vw;
+    }
+
+    .tituloN{
+        font-size: 4vw;;
+    }
+
+    .tituloM{
+        font-size: 4vw;
+    }
+
+    .tituloC{
+        font-size: 2.5vw;
+    }
+
     .columna-nosotros-izq {
         width: 80%; /* Ocupa todo el ancho de la columna izquierda */
-        margin-left: 7%;
+        margin: 7%;
         order:2;
-    }
-
-    .columna-nosotros-izq h4{
-        font-size: 3vw;
-    }
-
-    .columna-nosotros-izq h3{
-        align-items: center;
-        margin-left:27%;
     }
 
     .columna-nosotros-izq p{
         font-size: 2.7vw;
-    }
-
-
-    .columna-nosotros-izq h4{
-        font-size: 3vw;
-    }
-
-    .columna-nosotros-izq h1{
-        align-items: center;
-        margin-left:27%;
-        
     }
  
     .columna-nosotros-dcha {
@@ -550,10 +605,6 @@ footer {
         margin-right: 1%;
     }
 
-    .columna-carta-izq h3 {
-        font-size: 3.2vw;
-    }
-
     .columna-carta-dcha {
         width: 100%; /* Ocupa todo el ancho de la columna derecha */
     }
@@ -563,7 +614,7 @@ footer {
     }
 
     /* Ajustar el tamaño de fuente para pantallas pequeñas */
-    .columna-carta-dcha h6 {
+    .columna-carta-dcha h3 {
         font-size: 5.5vw;
         border-bottom: 1vw solid  rgba(253, 146, 107, 0.916);
     }
@@ -579,7 +630,7 @@ footer {
     .columna-blog-izq {
         order:2;
         width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
-        margin-right: 0;
+        margin: 0;
     }
 
     .columna-blog-dcha{
@@ -630,12 +681,10 @@ footer {
         background-color: rgba(253, 146, 107, 0); /* Color de fondo para las letras */
         padding: 5px;
         border-radius: 10px; /* Borde circular */
-        font-size: 2.5vw;
         z-index: 1;
     }
     
-    .columna-blog-izq h6{
-        font-size: 3.8vw;
+    .columna-blog-izq h3{
         margin: 3%; 
         border-bottom: 0.5vw solid  rgba(253, 146, 107, 0.916);
 

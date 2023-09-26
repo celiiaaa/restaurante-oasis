@@ -1,0 +1,14 @@
+TITULOS
+√ h1 - "OASIS ROSA"
+√ h2 - titulos de las cajas
+√ h3 class="titulo1" - "¡Bienvenidos a Oasis Rosa", "Menú de degustación" y "Comentarios de clientes"
+√ h3 class="titulo2" - "Nosotros" y "Blog"
+√ h3 class="titulo3" - "Nuestra carta"
+√ h4 class="tituloN" - "Nuestra historia" y "Nuestro espacio"
+√ h4 class="tituloM" - "Primeros", "Segundos" y "Postres"
+√ h4 class="tituloC" - nombres clientes
+
+p class="texto" - texto principal
+
+
+- revisar nosostros (margenes cuando se hace pequeño)
