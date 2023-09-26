@@ -2,7 +2,7 @@
    ESTILOS GENERALES
    =============================== */
 
-html{
+   html{
     scroll-behavior: smooth;
 }
 
@@ -470,6 +470,20 @@ footer {
 
 @media (max-width: 700px) {
 
+    .navegacion{
+        position: relative;
+        text-align: left;
+        display: block;
+    }
+
+    .titulo-barra{
+        font-size: 3.2vw;
+    }
+
+    .navegacion a{
+        font-size: 3vw;
+    }
+
     .columna.izquierda h1 {
         font-size: 15vw;
         top: 45%;
@@ -494,8 +508,17 @@ footer {
         width: 80%; /* Ocupa todo el ancho de la columna izquierda */
         margin-left: 7%;
         order:2;
-        
     }
+
+    .columna-nosotros-izq h4{
+        font-size: 3vw;
+    }
+
+    .columna-nosotros-izq h3{
+        align-items: center;
+        margin-left:27%;
+    }
+
     .columna-nosotros-izq p{
         font-size: 2.7vw;
     }
@@ -511,7 +534,6 @@ footer {
         
     }
  
-
     .columna-nosotros-dcha {
         width: 100%; 
     }
@@ -528,8 +550,16 @@ footer {
         margin-right: 1%;
     }
 
+    .columna-carta-izq h3 {
+        font-size: 3.2vw;
+    }
+
     .columna-carta-dcha {
         width: 100%; /* Ocupa todo el ancho de la columna derecha */
+    }
+
+    .columna-carta-dcha h5 {
+        font-size: 3.5vw;
     }
 
     /* Ajustar el tamaño de fuente para pantallas pequeñas */
@@ -574,9 +604,17 @@ footer {
         border-radius: 10px; /* Borde circular */
         font-size:3vw;
         z-index: 1;
-
-    
     }
+
+    .comentario-nuevo{
+        width: 40vw;
+        font-size: 2vw;
+    }
+
+    .boton-enviar {
+        width: 10vw;
+        font-size: 2vw;
+    } 
 
     .comentario p{
         z-index: 2;
@@ -609,12 +647,15 @@ footer {
 
     .contenedor-info{
         font-size: 80%;
-    
     }
 
     .columna-carta-izq{
         margin-top: 20%;
         }
+
+    .contenedor-info a {
+        font-size: 2vw;
+    }
 }
 
 
