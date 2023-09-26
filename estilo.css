@@ -287,6 +287,8 @@ a {
     background-color: #FFCCBC;
     overflow: hidden;   /* No se vea nada que sobresalga de ese espacio*/
     margin-left: 2%;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -314,7 +316,7 @@ a {
 
 .columna-carta-dcha h4{
     background-color: rgba(0, 0, 0, 0.7);
-    padding: 3%;
+    padding: 1%;
     margin-left: 3%;
     color: #fff;
 }
