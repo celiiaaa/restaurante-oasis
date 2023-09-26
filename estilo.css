@@ -24,7 +24,7 @@ h1 {
     margin: 0;
     position: absolute;
     top: 50%;
-    left: 20%;
+    left: 15%;
     z-index: 2;     /* colocar el nombre del restaurante encima del video */
     font-family: cursive; 
     color: white; 
@@ -99,8 +99,8 @@ h2 {
    =============================== */
 
 .barra {
-    display: flex;
-    justify-content: space-between;
+    display: flex;   /* Contenedor flexible */
+    justify-content: space-between;  /* Separación entre contenido */  
     align-items: center;
     background-color: rgba(253, 146, 107, 0.916);
 }
@@ -109,7 +109,6 @@ h2 {
     color:#fff;
     font-size: 1rem;
     margin-left: 20px;
-    box-sizing: border-box;
 }
 
 .navegacion a {
@@ -117,9 +116,8 @@ h2 {
     text-decoration: none;
     font-size: 1rem;
     justify-content: space-between;
-    display: inline;
+    display: inline;    /* En la misma línea*/  
     margin-right: 20px;
-    box-sizing: border-box;
 }
 
 /* ===============================
@@ -127,12 +125,11 @@ h2 {
    =============================== */
 
 .main-content {
-    flex: 1;
     max-height:4%;
 }
 
 .columnas {
-    display: flex;  /* crear dos columnas */
+    display: flex;  /* crear dos columnas, permite una al lado de la otra */
     background-color: #febca7;
 }
 
@@ -142,16 +139,13 @@ h2 {
 
 /* Columna izquierda - video y nombre del restaurante */
 .columna.izquierda {
-    position: relative;
+   position: relative;    /* Permite ajustar los elementos */  
     width: 40%;
     background-color: #febca7;
-    display: flex;
-    flex-direction: column;
 }
 
     /* estilo del video */
 .columna.izquierda video {
-    flex-grow: 1;
     width: 92%;
     height: auto;
     z-index: 1;     /* colocar el video detrás como fondo del nombre */
@@ -172,13 +166,11 @@ h2 {
     display: flex;
     flex-wrap: wrap; /* para ajustarlas a varias lineas */
     justify-content: center; /* alineación horizontal centrada */
-    align-items: center;
 }
     /* estilo de cada caja perteneciente al menú */
 .caja {
     text-align: center;
     margin: 5px;    /* para definir el espacio entre las cajas */
-    box-sizing: border-box;
     width: 45%;
     margin-left: 5px;
 }
@@ -187,7 +179,6 @@ h2 {
 .caja img {
     width: 100%; /* Ajusta el ancho máximo de la imagen al tamaño de la caja */
     height:100%;
-    object-fit: cover;
     cursor: pointer;
 }
 
@@ -198,13 +189,12 @@ h2 {
 a {
     color: white;
     width: 100%;
-    box-sizing: border-box;
     height: auto;
 }
 
 .separador{
     width: 100%;
-    height: 2vw;
+    height: 2vw;   /* vw: Porcentaje del ancho en el que se ve en el navegador */
     background-color: rgba(253, 146, 107, 0.916);
 }
 
@@ -234,8 +224,7 @@ a {
     width: 40%;
     background-color: #febca7;
     display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
+    flex-direction: column;  /* Disposición en columna */
     justify-content: center;
     align-items: center;
     margin-bottom: 2%;
@@ -245,7 +234,9 @@ a {
 .columna-nosotros-dcha h3 {
     background-color: #febca7;
     color: white;
-    padding: 4%;
+    background-color:  rgba(0, 0, 0, 0.4);
+    padding: 3%;
+    border-radius: 10px;
 }
 
 /* Galería de imágenes */
@@ -254,16 +245,10 @@ a {
     grid-template-rows: repeat(auto-fit, minmax(35%)); /* Ajusta los valores según sea necesario */
     gap: 2%; /* Espacio entre las imágenes */
     padding: 1%; /* Espacio alrededor de la galería */
-    box-sizing: border-box;
     align-items: center; 
     margin-right: 8%;
 }
 
-.grid-container .box {
-    width: 100%;
-    object-fit: cover;
-    box-sizing: border-box;
-}
 
 .box:nth-child(1){
     grid-column-start: span 2;
@@ -275,7 +260,7 @@ a {
 .grid-container img {
     max-width: 100%;
     max-height: 88%;
-    box-sizing: border-box;
+
 }
 
 /* ===============================
@@ -286,17 +271,17 @@ a {
 .columna-carta-izq{
     width: 40%;
     background-color: #FFCCBC;
-    overflow: hidden;
+    overflow: hidden;   /* No se vea nada que sobresalga de ese espacio*/
 }
 
 /* Columna derecha */
 .columna-carta-dcha {
     width: 60%;
     background-color: #febca7;
-    flex-direction: column;
+    display: flex;
+    flex-direction: column;    /* Elementos en columna*/
     justify-content: center;
     align-items: center;
-    display: flex;
 }
 
 .columna-carta-izq img{
@@ -328,14 +313,14 @@ a {
 .slider{
     width: 800%;
     display:flex;
-    overflow: hidden;
-    animation: cambio 24s infinite;
+    animation: cambio 24s infinite; /*Duración de 24 segundos y bucle infinito*/
 }
 
 .slider li{
     list-style: none;
 }
 
+/*Porcentajes de tiempos*/
 @keyframes cambio {
     0% {
         margin-left: 0;
@@ -402,7 +387,6 @@ a {
     margin-bottom: 2%;
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
     justify-content: center;
 }
 
@@ -425,7 +409,7 @@ a {
 }
 
 .comentario h4 {
-    position: absolute;
+    position: absolute;  /* Lugar específico */
     top: 0;
     left: 0;
     margin: 5px;
@@ -449,7 +433,6 @@ a {
     grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
     gap: 1%;
     padding: 1%;
-    box-sizing: border-box;
     width: 100%;
     object-fit: cover;
     max-width: 55%;
@@ -457,7 +440,6 @@ a {
 
 .box-blog {
     object-fit: cover;
-    box-sizing: border-box;
     width:100%;
 }
 
@@ -521,7 +503,6 @@ footer {
     .navegacion{
         position: relative;
         text-align: left;
-        display: block;
     }
 
     .titulo-barra{
@@ -548,7 +529,6 @@ footer {
         flex: 1; /* Ambas columnas ocupan todo el ancho */
         margin-right: 0; /* Eliminar espacio entre las columnas */
         width: 100%;
-        order:1;
     }
 
     h2 {
@@ -582,7 +562,7 @@ footer {
     .columna-nosotros-izq {
         width: 80%; /* Ocupa todo el ancho de la columna izquierda */
         margin: 7%;
-        order:2;
+        order:2;     /*Despues de la columna derecha*/
     }
 
     .columna-nosotros-izq p{
@@ -664,11 +644,11 @@ footer {
 
     .boton-enviar {
         width: 10vw;
-        font-size: 2vw;
+        font-size: 2vw;  
     } 
 
     .comentario p{
-        z-index: 2;
+        z-index: 2;   /* Por delante del recuadro */  
         font-size: 3vw;
 
     }
