@@ -54,6 +54,25 @@ h2 {
     cursor: pointer;
 }
 
+/* Título de la barra de navegación */
+.titulo-barra {
+    color: white;
+    font-size: 2vw;
+    margin-left: 5vw;
+    font-family: 'Optima';
+}
+
+/* Títulos secundarios de la barra de navegación */
+.navegacion a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.8vw;
+    justify-content: space-between;
+    display: inline;    /* En la misma línea*/  
+    margin-right: 20px;
+    font-family: 'Optima';
+}
+
 /* Títulos principales correspondientes a los textos */
 .titulo1{
     font-size: 3vw;
@@ -93,7 +112,7 @@ h2 {
 /* Títulos párrafos Blog */
 
 .tituloC{
-    font-size:1.8vw;
+    font-size:1.6vw;
     font-family: 'Avenir';
 }
 
@@ -105,7 +124,7 @@ h2 {
 }
 
 /* ===============================
-   BARRA NAVEGADORA
+   BARRA DE NAVEGACIÓN
    =============================== */
 
 .barra {
@@ -113,21 +132,6 @@ h2 {
     justify-content: space-between;  /* Separación entre contenido */  
     align-items: center;
     background-color: rgba(253, 146, 107, 0.916);
-}
-
-.titulo-barra {
-    color:#fff;
-    font-size: 1rem;
-    margin-left: 20px;
-}
-
-.navegacion a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    justify-content: space-between;
-    display: inline;    /* En la misma línea*/  
-    margin-right: 20px;
 }
 
 /* ===============================
@@ -723,7 +727,6 @@ footer {
 
 @media (max-width: 1100px) {
     .grid-container-blog {
-    
         max-width: 82%;
     }
 
@@ -731,6 +734,4 @@ footer {
     margin-top: 5%;
     margin-bottom: 5%;
     }
-
-
 }
