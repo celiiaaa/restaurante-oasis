@@ -1,14 +1,33 @@
-TITULOS
-√ h1 - "OASIS ROSA"
-√ h2 - titulos de las cajas
-√ h3 class="titulo1" - "¡Bienvenidos a Oasis Rosa", "Menú de degustación" y "Comentarios de clientes"
-√ h3 class="titulo2" - "Nosotros" y "Blog"
-√ h3 class="titulo3" - "Nuestra carta"
-√ h4 class="tituloN" - "Nuestra historia" y "Nuestro espacio"
-√ h4 class="tituloM" - "Primeros", "Segundos" y "Postres"
-√ h4 class="tituloC" - nombres clientes
+.grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(25%, 1fr)); /* Cambiamos a columnas automáticas con un ancho mínimo menor */
+        margin-right: 4%; /* Eliminamos el margen derecho */
+        margin-left: 4%;
+    }
 
-p class="texto" - texto principal
+    .columna-carta-izq {
+        width: 80%; /* Ocupa todo el ancho de la columna izquierda */
+        margin-left: 10%;
+        margin-right: 1%;
+    }
 
+    .columna-carta-dcha {
+        width: 100%; /* Ocupa todo el ancho de la columna derecha */
+    }
 
-- revisar nosostros (margenes cuando se hace pequeño)
+    .columna-carta-dcha h5 {
+        font-size: 3.5vw;
+    }
+
+    /* Ajustar el tamaño de fuente para pantallas pequeñas */
+    .columna-carta-dcha h3 {
+        font-size: 5.5vw;
+        border-bottom: 1vw solid  rgba(253, 146, 107, 0.916);
+    }
+
+    /* Ajustar el tamaño de fuente para pantallas pequeñas */
+    .columna-carta-dcha ol {
+        font-size: 2.8vw;
+        margin-left: 2%; /* Reducir el espacio a la izquierda de la lista */
+        border: 1vw solid #ffff;
+        padding: 7%;
+    }

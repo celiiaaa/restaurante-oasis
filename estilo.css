@@ -520,7 +520,7 @@ footer {
    RESPONSIVE
    =============================== */
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
 
     /* Barra navegadora */
     .navegacion{
@@ -582,70 +582,78 @@ footer {
         font-size: 2.5vw;
     }
 
+    .texto{
+        font-size: 3vw;
+    }
+
+    .texto li{
+        font-size: 3vw;
+    }
+    .columna-carta-dcha ol {
+        margin-left: 2%; /* Reducir el espacio a la izquierda de la lista */
+        border: 1vw solid #ffff;
+        padding: 7%;
+    }
+
     .columna-nosotros-izq {
         width: 80%; /* Ocupa todo el ancho de la columna izquierda */
         margin: 7%;
         order:2;     /*Despues de la columna derecha*/
+        margin-left: 9%;
+
     }
 
     .columna-nosotros-izq p{
         font-size: 2.7vw;
     }
  
+
     .columna-nosotros-dcha {
-        width: 100%; 
-    }
-
-   .grid-container {
-        grid-template-columns: repeat(auto-fit, minmax(25%, 1fr)); /* Cambiamos a columnas automáticas con un ancho mínimo menor */
-        margin-right: 4%; /* Eliminamos el margen derecho */
-        margin-left: 4%;
-    }
-
-    .columna-carta-izq {
-        width: 80%; /* Ocupa todo el ancho de la columna izquierda */
+        width: 80%; 
         margin-left: 10%;
-        margin-right: 1%;
+    }
+    
+    
+    #carta .columnas {
+        flex-direction: column; /* Cambiar a dirección de columna en pantallas pequeñas */
+        align-items: flex-start; /* Alineación en la parte superior */
+        width:100%;
     }
 
-    .columna-carta-dcha {
-        width: 100%; /* Ocupa todo el ancho de la columna derecha */
+    .columna-carta-izq{
+        width:100%;
+        height:100%;
+
     }
 
-    .columna-carta-dcha h5 {
-        font-size: 3.5vw;
+   
+    .columna-carta-dcha{
+        width:100%;
+        margin-left: 55%;
+        display:flex;
+        flex-direction: column; 
+       
     }
 
-    /* Ajustar el tamaño de fuente para pantallas pequeñas */
-    .columna-carta-dcha h3 {
-        font-size: 5.5vw;
-        border-bottom: 1vw solid  rgba(253, 146, 107, 0.916);
-    }
-
-    /* Ajustar el tamaño de fuente para pantallas pequeñas */
-    .columna-carta-dcha ol {
-        font-size: 2.8vw;
-        margin-left: 2%; /* Reducir el espacio a la izquierda de la lista */
-        border: 1vw solid #ffff;
-        padding: 7%;
-    }
-
+    
     .columna-blog-izq {
         order:2;
-        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
-        margin: 0;
+        width: 80%; /* Ocupa todo el ancho en pantallas pequeñas */
+        margin-right:10%;
     }
 
-    .columna-blog-dcha{
-        order:1;
-        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
-        margin-right: 0;
-    }
+    .columna-blog-dcha {
+    order:1;
+    width: 80%; 
+    margin-left: 10%;
+}
 
     .grid-container-blog {
         grid-template-columns: repeat(auto-fit, minmax(40%, 1fr)); /* Cambiamos a columnas automáticas con un ancho mínimo menor */
         margin-right: 0; /* Eliminamos el margen derecho */
     }
+
+
 
     .comentario {
         position: relative;
@@ -692,46 +700,147 @@ footer {
         border-bottom: 0.5vw solid  rgba(253, 146, 107, 0.916);
 
     }  
-    .icono-footer img {
-        width: 78%; /* Ajusta el ancho deseado */
-   
-    }
 
     .contenedor-info{
         font-size: 80%;
     }
 
-    .columna-carta-izq{
-        margin-top: 20%;
-        }
-
     .contenedor-info a {
         font-size: 2vw;
     }
+
+}
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 10vw;
+        font-family: cursive;
+        justify-content: center;
+    }
+
+    .columnas {
+        flex-direction: column; /* Cambiar a dirección de columna en pantallas pequeñas */
+        align-items: flex-start; /* Alineación en la parte superior */
+    }
+
+    .columna.izquierda,
+    .columna.derecha {
+        flex: 1; /* Ambas columnas ocupan todo el ancho */
+        margin-right: 0; /* Eliminar espacio entre las columnas */
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 4vw;
+    }
+
+    .titulo1{
+        font-size: 5vw;
+    }
+
+    .titulo2{
+        font-size: 6vw;
+    }
+
+    .titulo3{
+        font-size: 4vw;
+    }
+
+    .tituloN{
+        font-size: 4vw;;
+    }
+
+    .tituloM{
+        font-size: 4vw;
+    }
+
+    .tituloC{
+        font-size: 2.5vw;
+    }
+
+    .texto{
+        font-size: 2vw;
+    }
+
+.columna-nosotros-izq{
+    flex-direction: column; /* Cambiar a dirección de columna en pantallas pequeñas */
+    align-items: flex-start; /* Alineación en la parte superior */
+    width: 75%;
+    margin-top: 2%;
+
 }
 
 
-@media (max-width: 890px) {
-
-    .grid-container {
-        max-width: 100%;
-        max-height: 100%;
-    }
-    
-
-
-    .columna-nosotros-izq{
-       font-size: 1.6vw;
-    }
+#nosotros .columnas {
+    flex-direction: column; /* Cambiar a dirección de columna en pantallas pequeñas */
+    align-items: flex-start; /* Alineación en la parte superior */
 }
 
-@media (max-width: 1100px) {
-    .grid-container-blog {
-        max-width: 82%;
-    }
-
-    .columna-carta-izq{
-    margin-top: 5%;
-    margin-bottom: 5%;
-    }
+.columna-nosotros-dcha {
+    width: 80%; 
+    margin-left: 10%;
 }
+
+.grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr)); /* Cambiamos a columnas automáticas con un ancho mínimo menor */
+    margin-right: 4%; /* Eliminamos el margen derecho */
+    margin-left: 4%;
+}
+
+
+#carta .columnas {
+    flex-direction: column; /* Cambiar a dirección de columna en pantallas pequeñas */
+    align-items: flex-start; /* Alineación en la parte superior */
+}
+
+.columna-carta-izq{
+    flex-direction: column; /* Cambiar a dirección de columna en pantallas pequeñas */
+    align-items: flex-start; /* Alineación en la parte superior */
+    width: 96%;
+    margin-top: 2%;
+}
+
+
+
+.columna-carta-dcha {
+    width: 80%; 
+    margin-left: 10%;
+}
+
+#blog .columnas {
+    flex-direction: column; /* Cambiar a dirección de columna en pantallas pequeñas */
+    align-items: flex-start; /* Alineación en la parte superior */
+}
+
+.columna-blog-izq{
+    flex-direction: column; /* Cambiar a dirección de columna en pantallas pequeñas */
+    align-items: center; /* Alineación en la parte superior */
+    width: 96%;
+    margin-top: 2%;
+}
+
+
+
+.columna-blog-dcha {
+    width: 80%; 
+    margin-left: 10%;
+}
+
+/* Eliminamos dos fotos para que no quede tan alargado*/
+.grid-container-blog .box-blog:nth-child(5),
+.grid-container-blog .box-blog:nth-child(4) {
+    display: none;
+}
+.icono-footer img {
+    width: 78%; /* Ajusta el ancho deseado */
+
+}
+
+}
+
+
+
+
+
+
